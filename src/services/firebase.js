@@ -3,7 +3,6 @@ import 'firebase/auth';
 import dotenv from 'dotenv';
 dotenv.config();
 
-firebase.analytics();
 firebase.initializeApp({
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -15,3 +14,23 @@ firebase.initializeApp({
 });
 
 export const auth = firebase.auth();
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+
+// Sign in functionality using Google
+export const SignInWithGoogle = () => {
+    auth.signInWithPopup(googleProvider).then((res) => {
+        console.log('User signed in!', res.user);
+    }).catch((error) => {
+        console.log(error);
+    })
+}
+
+// Logout from your Google account
+export const LogOut = () => {
+    auth.signOut().then(() => {
+        console.log('Logged out!');
+    }).catch((error) => {
+        console.log(error.message);
+    })
+}
