@@ -8,7 +8,7 @@ const SetUserContext = (props) => {
     useEffect(() => {
         auth.onAuthStateChanged( async (user) => {
             if (user) {
-                const {displayName, email} = user;
+                const { displayName, email } = user;
                 setUser({
                     displayName,
                     email
