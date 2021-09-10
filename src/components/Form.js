@@ -20,7 +20,7 @@ const Form = ({ setShowForm, formText, setFormText, cards, setCards }) => {
 
     return (
         <form className='form'>
-            <textarea className='textForm' placeholder='Write some text here!' onChange={(e) => setFormText(e.target.value)}/>
+            <textarea className='textForm' placeholder='Write some text here!' required onChange={(e) => setFormText(e.target.value)}/>
             <button onClick={handleSubmit}>Submit</button>
         </form>
     )

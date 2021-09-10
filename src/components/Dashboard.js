@@ -22,6 +22,7 @@ const Dashboard = () => {
     if (redirect) {
         return <Redirect to={redirect} />
     }
+
     return (
         <div className='dashboard'>
             <h1 className='title'>Day<span className='titleSpan'>Logger</span></h1>

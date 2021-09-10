@@ -107,6 +107,11 @@ html {
   background-color: #073d66;
 }
 
+.card span {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
 .card p {
   margin-top: 1rem;
 }
@@ -115,4 +120,9 @@ html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 1rem;
+}
+
+.trashIcon {
+  margin-top: 12px;
+  cursor: pointer;
 }
