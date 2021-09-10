@@ -9,7 +9,6 @@
 .App {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  background-color: ;
 }
 
 .title {
@@ -28,7 +27,7 @@
 }
 
 .subTitle {
-  margin: 2rem auto;
+  margin: 1.3rem auto;
   font-weight: 500;
   font-size: 1.3rem;
 }
@@ -36,13 +35,70 @@
 .add {
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  padding: 2px 20px;
-  border: 1px solid black;
-  border-radius: 10px;
+  font-weight: 400;
+  padding: 4px 20px;
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
+  background-color: #2978b5;
+  color: white;
 }
 
 .add:hover {
-  background-color: rgba(223, 219, 219, 0.76);
+  background-color: #2b71a7;
+}
+
+.textForm {
+  resize: none;
+  display: inline-block;
+  width: 40rem;
+  height: 10rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: none;
+}
+
+.textForm:focus {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form button {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 4px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #2978b5;
+  color: white;
+}
+
+.card {
+  width: 20rem;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  color: white;
+  background-color: #2978b5;
+}
+
+.card p {
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }

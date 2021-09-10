@@ -1,10 +1,18 @@
 import React from 'react'
 
-const Form = () => {
+const Form = ({ setShowForm }) => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setShowForm(false);
+
+    }
+
     return (
-        <div>
-            <p>This is the form</p>
-        </div>
+        <form className='form'>
+            <textarea className='textForm' placeholder='Write some text here!' />
+            <button onClick={handleSubmit}>Submit</button>
+        </form>
     )
 }
 
