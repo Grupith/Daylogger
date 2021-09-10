@@ -9,6 +9,8 @@ const Dashboard = () => {
     const user = useContext(UserContext);
     const [redirect, setRedirect] = useState(null);
     const [showForm, setShowForm] = useState(false);
+    const [formText, setFormText] = useState('');
+    const [cards, setCards] = useState([]);
 
     // If a user is not logged in, kick them back to the login page
     useEffect(() => {
@@ -21,13 +23,13 @@ const Dashboard = () => {
         return <Redirect to={redirect} />
     }
     return (
-        <div>
+        <div className='dashboard'>
             <h1 className='title'>Day<span className='titleSpan'>Logger</span></h1>
             <h2 className='subTitle'>Write a journal prompt each day.</h2>
             
             {!showForm ? <button className='add' onClick={() => { setShowForm(showForm => !showForm);}}>Add</button> : <div />}
-            {showForm && <Form setShowForm={setShowForm} />}
-            <Grid />
+            {showForm && <Form setShowForm={setShowForm} formText={formText} setFormText={setFormText} cards={cards} setCards={setCards} />}
+            <Grid cards={cards} setCards={setCards} />
 
         </div>
     )

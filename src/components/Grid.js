@@ -1,16 +1,15 @@
 import React from 'react';
 import Card from './Card';
 
-const Grid = () => {
+const Grid = ({ cards, setCards }) => {
     return (
         <div className='grid'>
             <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {cards.map((card) => <div className='card' key={card.id}>
+                <span>{card.date}</span>
+                <p>{card.body}</p>
+            </div> )}
+    
         </div>
     )
 }
